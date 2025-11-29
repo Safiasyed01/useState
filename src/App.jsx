@@ -1,19 +1,20 @@
 import React, { useState } from 'react'
 
 const App = () => {
-//const [num, setnum] = useState(98)
-//const [name, setname] = useState('safiaa')
-const [num, setnum] = useState(12)
-const [first, setfirst] = useState('innaa')
-function changeNum(){
-  setnum(89)
-  setfirst('shanz')
+const [num, setnum] = useState(0)
+function increaseNum(){
+ setnum(num+1)
+}
+
+function decreaseNum(){
+setnum(num-1)
 }
   return (
     <div>
-     {/* // <h1>the value is {name}</h1> */}
-     <h1> {num }, {first}</h1>
-     <button onClick={changeNum}click></button>
+      <h1>{num}</h1>
+      <button onClick={increaseNum}>increase</button>
+      <button onClick={decreaseNum}>decrease</button>
+
     </div>
   )
 }
